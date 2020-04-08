@@ -1,0 +1,7 @@
+/* pages/detail/detail.wxss */
+swiper {
+  height:750rpx;
+}
+swiper-item image{
+  width: 100%;
+}

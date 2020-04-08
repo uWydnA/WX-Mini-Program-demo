@@ -1,0 +1,9 @@
+<!--pages/center/center.wxml-->
+<view wx:if='{{!users}}' >
+	<button  open-type='getUserInfo' bindgetuserinfo='handleUserInfo'>授权</button>
+</view>
+
+<view wx:else class="loginImg">
+  <image src='{{users.avatarUrl}}' mode='widthFix'></image>
+  <view>{{users.nickName}}</view>
+</view>

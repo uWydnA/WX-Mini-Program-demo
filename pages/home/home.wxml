@@ -1,0 +1,38 @@
+<!--pages/home/home.wxml === 微信HTML页面-->
+<view>
+	hello
+</view>
+<view>支持表达式语法{{10+20}}</view>
+<view>支持三目表达式：{{10>20?'aaa':'bbb'}}</view>
+<view>{{mytext}}</view>
+<view>1111</view>
+<button bindtap="handleClick">click</button>
+<view class='todolist'>
+	<input maxlength='4' bindinput='handleInput' value='{{mytext}}'></input>
+	<button size='mini' bindtap='submit'>add</button>
+</view>
+<view wx:for='{{list}}' wx:key='data' wx:for-item='data' wx:for-index='idx'>
+	{{data}} -- {{idx}} -- <button size='mini' bindtap='handleDel' data-id='{{idx}}'>delete</button>
+	<!-- 
+		遵循了HTML5标准
+		html:
+		<div myid='1111'></div>
+		setAttribute
+		getAttribute
+
+		h5:
+		<div data-id='111'></div>
+		console.log(ev.target.dataset.id)
+	 -->
+</view>
+
+<view>点击变色</view>
+<view wx:for='{{list}}' wx:key='index' bindtap="changeColor" data-id='{{index}}' class="{{inow === index ?'active':''}}">
+	<view>{{item}}</view>
+</view>
+
+<button bindtap='handleShow'>show/hide</button>
+<view hidden='{{isShow}}'>我是动态隐藏和显示</view>
+
+<view wx:if='{{isCreated}}'>我是动态创建和删除</view>
+<button bindtap='handleIf'>create/distroy</button>

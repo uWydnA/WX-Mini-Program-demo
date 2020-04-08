@@ -1,0 +1,14 @@
+/* pages/center/center.wxss */
+image{
+  margin:40rpx 0;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  text-align: center;
+}
+.loginImg{
+  margin:100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

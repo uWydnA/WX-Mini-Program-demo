@@ -1,0 +1,26 @@
+/* pages/shopcar/shopcar.wxss */
+.shopcar{
+  display: flex;
+  padding:10rpx;
+  margin:10rpx;
+  border:1px solid #000
+
+}
+.shopcar image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.step{
+  display: flex;
+}
+.step input{
+  margin:0 10rpx;
+  width: 50rpx;
+  text-align: center;
+}
+.step .btn{
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+}

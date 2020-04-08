@@ -1,0 +1,23 @@
+/* pages/demo/demo.wxss */
+swiper-item image{
+  width: 100%;
+}
+swiper{
+  height:300rpx;
+}
+.shoplist{
+  overflow: hidden;
+}
+.shoplist .left{
+  float:left;
+  width: 200rpx;
+}
+.shoplist .right{
+  float:left;
+}
+.shoplist .feature{
+  width: 500rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

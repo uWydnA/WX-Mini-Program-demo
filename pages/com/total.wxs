@@ -1,0 +1,14 @@
+var func = function (data) {
+ if(data){
+  var sum = 0
+  for(var i=0;i<data.length;i++){
+    if(data[i].checked==true){
+      sum+=data[i].good.price*data[i].number
+    }
+  }
+  return sum
+ }
+}
+module.exports = {
+  total: func,
+};

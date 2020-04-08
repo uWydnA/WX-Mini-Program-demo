@@ -1,0 +1,10 @@
+<!--pages/detail/detail.wxml-->
+<view>{{datalist.name}}</view>
+<view>{{datalist.feature}}</view>
+<swiper>
+  <swiper-item wx:for='{{datalist.slides}}' wx:key='index'>
+    <image src='{{"http://localhost:3030"+item}}' mode='widthFix'></image>
+  </swiper-item>
+</swiper>
+<button bindtap='handleClick'>加入购物车</button>
+<button bindtap='handleShopCar'>跳转购物车</button>

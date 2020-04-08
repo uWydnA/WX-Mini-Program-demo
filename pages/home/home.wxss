@@ -1,0 +1,8 @@
+/* pages/home/home.wxss */
+input{
+  border:1px solid #000;
+}
+.todolist{
+  display: flex;
+}
+.active{background-color: #f99;}

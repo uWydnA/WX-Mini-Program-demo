@@ -1,0 +1,17 @@
+<!--pages/demo/demo.wxml-->
+<swiper indicator-dots='{{true}}' autoplay='{{true}}' interval='{{1000}}' circular='{{true}}'>
+	<swiper-item wx:for='{{looplist}}' wx:key='id'>
+    {{item.images}}
+		<image src="{{'http://localhost:3030'+item.url}}" mode='widthFix'></image>
+	</swiper-item>
+</swiper>
+<view wx:for='{{datalist}}' bindtap='handleChangePage' data-id='{{item.id}}' wx:key='id' class="shoplist">
+	<image class="left" src="{{'http://localhost:3030'+item.poster}}" mode='widthFix'></image>
+  <view class="right">
+    <view style='color:#666;font-weight:600'>{{item.name}}</view>
+    <view style='color:red'>{{item.price}}</view>
+    <view class='feature'>{{item.feature}}</view>
+    <view>好评率：{{item.goodcomment}}</view>
+  </view>
+</view>
+<view hidden="{{isBottom}}">到底啦</view>

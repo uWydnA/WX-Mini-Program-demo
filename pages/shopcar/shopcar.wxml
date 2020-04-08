@@ -1,0 +1,20 @@
+<!--pages/shopcar/shopcar.wxml-->
+<!-- 如果在小程序JS中定义了一个函数，{{不支持函数调用方法}} -->
+<wxs src="./../com/total.wxs" module="total" />
+<view>总金额：{{total.total(datalist)}}</view>
+<view wx:for='{{datalist}}' wx:key='index' class="shopcar" bindlongtap="handleLongTap" data-id='{{item.id}}'>
+	<checkbox-group bindchange="checkboxChange" data-id='{{item.id}}'>
+		<checkbox value='{{item.checked}}'  checked='{{item.checked}}'></checkbox>
+	</checkbox-group>
+	<image mode='widthFix' src='{{"http://localhost:3030"+item.good.poster}}'></image>
+	<view>
+		<view>{{item.good.name}}</view>
+		<view style='color:red'>{{item.good.price}}</view>
+		<view class="step">
+			<view class="btn" bindtap='handleJian' data-id='{{item.id}}'>-</view>
+			<input value="{{item.number}}"></input>
+			<view class="btn" bindtap='handleAdd' data-id='{{item.id}}'>+</view>
+		</view>
+		<view class="price">金额：{{item.number*item.good.price}}</view>
+	</view>
+</view>
